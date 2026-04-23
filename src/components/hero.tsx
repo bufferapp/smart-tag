@@ -145,7 +145,7 @@ function TokenShowcase() {
       >
         <div className="relative h-[62%] w-[62%] overflow-hidden rounded-2xl glow-buffer">
           <Image
-            src="/smart_tag.jpg"
+            src="/token2.jpg"
             alt="Buffer Smart Tag — a 3D-printed black token with the green Buffer chevron logo"
             fill
             priority
