@@ -19,10 +19,56 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://smart-tag.bpaulino.com";
+const title = "Buffer Smart Tag — A physical trigger for your digital workflows";
+const description =
+  "A handmade, 3D-printed, NFC-enabled token gifted at Buffer Team Retreat. Tap to publish, schedule, or automate — the physical trigger for your Buffer workflows.";
+
 export const metadata: Metadata = {
-  title: "Buffer Smart Tag — A physical trigger for your digital workflows",
-  description:
-    "A handmade, 3D-printed, NFC-enabled token gifted at Buffer Team Retreat. Tap to publish, schedule, or automate — the physical trigger for your Buffer workflows.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  applicationName: "Buffer Smart Tag",
+  authors: [{ name: "Bruno Paulino" }],
+  creator: "Bruno Paulino",
+  keywords: [
+    "Buffer",
+    "Smart Tag",
+    "NFC",
+    "automation",
+    "Buffer API",
+    "Buffer CLI",
+    "Team Retreat",
+    "3D-printed",
+  ],
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Buffer Smart Tag",
+    title,
+    description,
+    locale: "en_US",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Buffer Smart Tag — a physical trigger for your digital workflows",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
