@@ -102,6 +102,19 @@ export function Flow() {
   );
 }
 
+const Muted = ({ children }: { children: React.ReactNode }) => (
+  <span className="text-muted-foreground">{children}</span>
+);
+const Fg = ({ children }: { children: React.ReactNode }) => (
+  <span className="text-foreground">{children}</span>
+);
+const Acc = ({ children }: { children: React.ReactNode }) => (
+  <span className="text-buffer">{children}</span>
+);
+const Str = ({ children }: { children: React.ReactNode }) => (
+  <span className="text-foreground/90">{children}</span>
+);
+
 function CodeSample() {
   return (
     <motion.div
@@ -118,7 +131,7 @@ function CodeSample() {
           <span className="h-2.5 w-2.5 rounded-full bg-foreground/10" />
         </div>
         <span className="ml-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          tap-handler.ts
+          tap-handler.sh
         </span>
         <span className="ml-auto flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-buffer">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-buffer" />
@@ -127,53 +140,39 @@ function CodeSample() {
       </div>
       <pre className="overflow-x-auto p-6 font-mono text-[13px] leading-relaxed">
         <code>
-          <span className="text-muted-foreground">{"// "}tag tapped → agent decides → buffer publishes</span>
+          <Muted>{"#!/usr/bin/env bash"}</Muted>
           {"\n"}
-          <span className="text-buffer">const</span>{" "}
-          <span className="text-foreground">post</span>{" "}
-          <span className="text-muted-foreground">=</span>{" "}
-          <span className="text-buffer">await</span>{" "}
-          <span className="text-foreground">agent</span>
-          <span className="text-muted-foreground">.</span>
-          <span className="text-foreground">draft</span>
-          <span className="text-muted-foreground">(</span>
-          <span className="text-buffer">{'"launch-announcement"'}</span>
-          <span className="text-muted-foreground">);</span>
+          <Muted>{"# fires when the Smart Tag is tapped → drafts a post → ships it"}</Muted>
+          {"\n\n"}
+          <Muted>{"# 1. an AI agent drafts the copy for this trigger"}</Muted>
           {"\n"}
-          {"\n"}
-          <span className="text-buffer">await</span>{" "}
-          <span className="text-foreground">buffer</span>
-          <span className="text-muted-foreground">.</span>
-          <span className="text-foreground">updates</span>
-          <span className="text-muted-foreground">.</span>
-          <span className="text-foreground">create</span>
-          <span className="text-muted-foreground">(</span>
-          <span className="text-muted-foreground">{"{"}</span>
+          <Fg>POST</Fg>
+          <Muted>=$(</Muted>
+          <Acc>claude</Acc>{" "}
+          <Str>{'"Draft a launch tweet for the Buffer Smart Tag."'}</Str>{" "}
+          <Muted>{"\\"}</Muted>
           {"\n  "}
-          <span className="text-foreground">profile_ids</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-foreground">team</span>
-          <span className="text-muted-foreground">.</span>
-          <span className="text-foreground">socials</span>
-          <span className="text-muted-foreground">,</span>
+          <Muted>--max-tokens</Muted> <Fg>280</Fg>
+          <Muted>)</Muted>
+          {"\n\n"}
+          <Muted>{"# 2. push it through the Buffer CLI to every channel in the queue"}</Muted>
+          {"\n"}
+          <Acc>buffer</Acc> <Fg>posts create</Fg> <Muted>{"\\"}</Muted>
           {"\n  "}
-          <span className="text-foreground">text</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-foreground">post</span>
-          <span className="text-muted-foreground">.</span>
-          <span className="text-foreground">body</span>
-          <span className="text-muted-foreground">,</span>
+          <Muted>--channel-id</Muted>{" "}
+          <Str>{'"$BUFFER_CHANNEL_ID"'}</Str>{" "}
+          <Muted>{"\\"}</Muted>
           {"\n  "}
-          <span className="text-foreground">now</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-buffer">true</span>
-          <span className="text-muted-foreground">,</span>
-          {"\n"}
-          <span className="text-muted-foreground">{"});"}</span>
-          {"\n"}
-          {"\n"}
-          <span className="text-muted-foreground">{"// → "}</span>
-          <span className="text-buffer">✓ published to 4 channels (184ms)</span>
+          <Muted>--mode</Muted> <Str>addToQueue</Str>{" "}
+          <Muted>{"\\"}</Muted>
+          {"\n  "}
+          <Muted>--text</Muted> <Str>{'"$POST"'}</Str>{" "}
+          <Muted>{"\\"}</Muted>
+          {"\n  "}
+          <Muted>--fields</Muted> <Str>id,status,scheduledAt</Str>
+          {"\n\n"}
+          <Muted>{"# → "}</Muted>
+          <Acc>{'{ "id": "post_01HXZ...", "status": "queued", "scheduledAt": "2026-04-23T17:30Z" }'}</Acc>
         </code>
       </pre>
     </motion.div>
