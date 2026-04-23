@@ -145,15 +145,17 @@ function TokenShowcase() {
       >
         <div className="relative h-[62%] w-[62%] overflow-hidden rounded-2xl glow-buffer">
           <Image
-            src="/token2.jpg"
+            src="/tag_home.jpg"
             alt="Buffer Smart Tag — a 3D-printed black token with the green Buffer chevron logo"
             fill
             priority
             sizes="(min-width: 1024px) 520px, 90vw"
             className="object-cover"
-            style={{ transform: "rotate(10deg) scale(1.2)" }}
+            style={{
+              transform: "translateX(-1.5%) translateY(4%) scale(1.25)",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-tr from-background/40 via-transparent to-transparent" />
         </div>
       </motion.div>
 
