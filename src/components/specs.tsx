@@ -75,7 +75,7 @@ export function Specs() {
           </div>
           <p className="max-w-md text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg lg:justify-self-end">
             PLA, a NFC chip, magnets, and enough love to make this glow in the
-            dark.
+            dark. And I mean it. Try it out in the dark, it glows! 💚
           </p>
         </div>
 
