@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import { ChevronMark } from "./chevron-mark";
 
 export function Footer() {
@@ -44,8 +45,21 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80 sm:flex-row sm:items-center">
-          <span>
-            © {new Date().getFullYear()} · Made with care for the Buffer team
+          <span className="flex items-center gap-1.5">
+            © {new Date().getFullYear()} · Made with
+            <Heart
+              className="h-3 w-3 fill-buffer text-buffer"
+              strokeWidth={0}
+            />
+            by{" "}
+            <a
+              href="https://github.com/brunojppb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline decoration-buffer/50 decoration-1 underline-offset-4 transition-colors hover:text-buffer hover:decoration-buffer"
+            >
+              Bruno
+            </a>
           </span>
           <span className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-buffer" />
