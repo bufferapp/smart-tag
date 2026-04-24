@@ -1,9 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Play, Clock3 } from "lucide-react";
 
+const YOUTUBE_ID = "fhjrJQ8aKcM";
+
 export function VideoSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section
       id="demo"
@@ -17,12 +22,12 @@ export function VideoSection() {
             05 · The Demo
           </div>
           <h2 className="text-balance text-4xl font-medium leading-[1] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-            Watch it{" "}
-            <span className="font-serif italic text-buffer">move</span>.
+            Watch it <span className="font-serif italic text-buffer">move</span>
+            .
           </h2>
           <p className="mx-auto mt-6 max-w-lg text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
             A short film on the whole thing — design, 3D print, flash the chip,
-            tap, publish. Dropping at Team Retreat.
+            tap, publish.
           </p>
         </div>
 
@@ -33,60 +38,78 @@ export function VideoSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative mx-auto aspect-video max-w-5xl overflow-hidden rounded-2xl border border-hairline bg-surface/80"
         >
-          {/* grain / scanlines */}
-          <div className="absolute inset-0 grain" />
-          <div
-            className="absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(0deg, rgba(255,255,255,0.3) 0, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 3px)",
-            }}
-          />
+          {isPlaying ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&modestbranding=1`}
+              title="Buffer Smart Tag — Instructions Manual"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+            />
+          ) : (
+            <button
+              type="button"
+              aria-label="Play Buffer Smart Tag film"
+              onClick={() => setIsPlaying(true)}
+              className="group absolute inset-0 cursor-pointer text-left"
+            >
+              {/* grain / scanlines */}
+              <div className="absolute inset-0 grain" />
+              <div
+                className="absolute inset-0 opacity-[0.06]"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(0deg, rgba(255,255,255,0.3) 0, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 3px)",
+                }}
+              />
 
-          {/* timecode + meta */}
-          <div className="absolute left-6 top-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            <span className="flex h-1.5 w-1.5 rounded-full bg-buffer" />
-            REC · 00:00:00:00
-          </div>
-          <div className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            CH-01 / smart-tag.mov
-          </div>
-
-          {/* centered play */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex flex-col items-center gap-6">
-              <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-buffer/40 bg-surface/60 backdrop-blur">
-                <span
-                  className="absolute inset-0 rounded-full border border-buffer/30"
-                  style={{
-                    animation: "pulse-ring 2.4s ease-out infinite",
-                  }}
-                />
-                <Play
-                  className="h-8 w-8 fill-buffer text-buffer"
-                  strokeWidth={1}
-                />
+              {/* timecode + meta */}
+              <div className="absolute left-6 top-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-buffer" />
+                REC · 00:00:00:00
               </div>
-              <div className="flex items-center gap-2 rounded-full border border-hairline bg-surface/80 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur">
-                <Clock3 className="h-3 w-3 text-buffer" />
-                Coming at Team Retreat
+              <div className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                CH-01 / buffer-smart-tag.mp4
               </div>
-            </div>
-          </div>
 
-          {/* bottom gradient */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background/90 to-transparent" />
+              {/* centered play */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-6">
+                  <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-buffer/40 bg-surface/60 backdrop-blur transition-transform duration-300 group-hover:scale-110">
+                    <span
+                      className="absolute inset-0 rounded-full border border-buffer/30"
+                      style={{
+                        animation: "pulse-ring 2.4s ease-out infinite",
+                      }}
+                    />
+                    <Play
+                      className="h-8 w-8 fill-buffer text-buffer"
+                      strokeWidth={1}
+                    />
+                  </div>
+                  <div className="flex items-center gap-2 rounded-full border border-hairline bg-surface/80 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur transition-colors group-hover:border-buffer/40 group-hover:text-foreground">
+                    <Clock3 className="h-3 w-3 text-buffer" />
+                    Press play · 02:00
+                  </div>
+                </div>
+              </div>
 
-          <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            <div>
-              <div className="text-foreground">BUFFER SMART TAG — THE FILM</div>
-              <div className="mt-1">DIR: BRUNO PAULINO</div>
-            </div>
-            <div className="text-right">
-              <div>RUNTIME ~02:30</div>
-              <div className="mt-1">SHOT IN 4K</div>
-            </div>
-          </div>
+              {/* bottom gradient */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background/90 to-transparent" />
+
+              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+                <div>
+                  <div className="text-foreground">INSTRUCTIONS MANUAL</div>
+                  <div className="mt-1">CRAFTED BY: BRUNO PAULINO</div>
+                </div>
+                <div className="text-right">
+                  <div>RUNTIME ~02:00</div>
+                  <div className="mt-1">SHOT IN 4K</div>
+                </div>
+              </div>
+            </button>
+          )}
         </motion.div>
       </div>
     </section>
