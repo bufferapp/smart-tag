@@ -53,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
             className="mt-8 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground lg:text-xl"
           >
-            The Buffer Smart Tag is a handmade, 3D-printed, NFC-enabled token —
+            The Buffer Smart Tag is a handmade, 3D-printed, NFC-enabled token,
             one for every teammate at Team Retreat. Tap it to publish, schedule,
             or orchestrate any Buffer workflow. Automations already live on your
             fridge.
@@ -145,7 +145,7 @@ function TokenShowcase() {
         <div className="relative h-[62%] w-[62%] overflow-hidden rounded-full glow-buffer">
           <Image
             src="/tag_no_bg.png"
-            alt="Buffer Smart Tag — a 3D-printed black token with the green Buffer chevron logo"
+            alt="Buffer Smart Tag: a 3D-printed black token with the green Buffer chevron logo"
             fill
             priority
             sizes="(min-width: 1024px) 520px, 90vw"

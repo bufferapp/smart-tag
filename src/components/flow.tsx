@@ -53,7 +53,7 @@ export function Flow() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
             The tag is the interface. Behind it, an agent decides what to post,
-            when, and where — using the same Buffer API you already know.
+            when, and where, using the same Buffer API you already know.
           </p>
         </div>
 

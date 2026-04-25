@@ -20,9 +20,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 const siteUrl = "https://smart-tag.bpaulino.com";
-const title = "Buffer Smart Tag — A physical trigger for your digital workflows";
+const title = "Buffer Smart Tag: A physical trigger for your digital workflows";
 const description =
-  "A handmade, 3D-printed, NFC-enabled token gifted at Buffer Team Retreat. Tap to publish, schedule, or automate — the physical trigger for your Buffer workflows.";
+  "A handmade, 3D-printed, NFC-enabled token gifted at Buffer Team Retreat. Tap to publish, schedule, or automate. The physical trigger for your Buffer workflows.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Buffer Smart Tag — a physical trigger for your digital workflows",
+        alt: "Buffer Smart Tag: a physical trigger for your digital workflows",
       },
     ],
   },

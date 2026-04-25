@@ -15,7 +15,7 @@ const useCases = [
   {
     icon: LinkIcon,
     title: "Open any URL",
-    detail: "A Buffer dashboard, a Google Doc, a YouTube video — whatever.",
+    detail: "A Buffer dashboard, a Google Doc, a YouTube video, whatever.",
   },
   {
     icon: Workflow,
@@ -30,7 +30,7 @@ const useCases = [
   {
     icon: Wifi,
     title: "Share Wi-Fi",
-    detail: "Guest SSID + password. Tap once, connect — no typing.",
+    detail: "Guest SSID + password. Tap once, connect. No typing.",
   },
   {
     icon: Contact,
@@ -57,7 +57,7 @@ const apps = [
     platform: "Android",
     name: "NFC Writer",
     meta: "Google Play · Free",
-    tagline: "Simple, reliable writer for NTAG chips — URLs, text, and more.",
+    tagline: "Simple, reliable writer for NTAG chips: URLs, text, and more.",
     href: "https://play.google.com/store/apps/details?id=com.manjul.utility.nfc.writer",
     Icon: PlayIcon,
   },
@@ -84,7 +84,7 @@ export function Program() {
           </div>
           <p className="max-w-md text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg lg:justify-self-end">
             Grab a free NFC writer app, point it at the tag, and flash whatever
-            payload you want. Rewrite it a thousand times — same tag, new trick.
+            payload you want. Rewrite it a thousand times. Same tag, new trick.
           </p>
         </div>
 
@@ -196,7 +196,7 @@ export function Program() {
                 Pro tip ·{" "}
               </span>
               Write a URL that points at an iOS Shortcut or an Android Tasker
-              task — then the tag can run <em>any</em> automation on your phone.
+              task. Then the tag can run <em>any</em> automation on your phone.
             </p>
           </div>
         </div>

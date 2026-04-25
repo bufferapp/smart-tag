@@ -27,7 +27,7 @@ export function VideoSection() {
             .
           </h2>
           <p className="mx-auto mt-6 max-w-lg text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg">
-            A short film on the whole thing — design, 3D print, flash the chip,
+            A short film on the whole thing: design, 3D print, flash the chip,
             tap, publish.
           </p>
         </div>
@@ -42,7 +42,7 @@ export function VideoSection() {
           {isPlaying ? (
             <iframe
               src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1&rel=0&modestbranding=1`}
-              title="Buffer Smart Tag — Instructions Manual"
+              title="Buffer Smart Tag: Instructions Manual"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -58,7 +58,7 @@ export function VideoSection() {
               {/* background cover */}
               <Image
                 src="/video_cover.jpg"
-                alt="Buffer Smart Tag — film cover"
+                alt="Buffer Smart Tag: film cover"
                 fill
                 sizes="(min-width: 1024px) 1024px, 100vw"
                 loading="eager"
