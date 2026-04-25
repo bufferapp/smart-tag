@@ -121,7 +121,6 @@ function TokenShowcase() {
 
       {/* pulse rings */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="absolute h-[55%] w-[55%] rounded-full border border-buffer/20" />
         <span
           className="absolute h-[55%] w-[55%] rounded-full border border-buffer/40"
           style={{
@@ -143,9 +142,9 @@ function TokenShowcase() {
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute inset-0 flex items-center justify-center"
       >
-        <div className="relative h-[62%] w-[62%] overflow-hidden rounded-2xl glow-buffer">
+        <div className="relative h-[62%] w-[62%] overflow-hidden rounded-full glow-buffer">
           <Image
-            src="/tag_home.jpg"
+            src="/tag_no_bg.png"
             alt="Buffer Smart Tag — a 3D-printed black token with the green Buffer chevron logo"
             fill
             priority
