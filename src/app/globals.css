@@ -55,10 +55,10 @@
 }
 
 :root {
-  --background: #060606;
+  --background: #0a0a0a;
   --foreground: #f5f5f4;
-  --surface: #0c0c0c;
-  --surface-2: #131313;
+  --surface: #111111;
+  --surface-2: #181818;
   --hairline: rgba(255, 255, 255, 0.08);
   --buffer: #9fe870;
   --buffer-glow: rgba(159, 232, 112, 0.4);
