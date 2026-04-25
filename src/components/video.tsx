@@ -13,7 +13,7 @@ export function VideoSection() {
   return (
     <section
       id="demo"
-      className="relative border-b border-hairline/60 py-28 lg:py-40"
+      className="relative border-b border-hairline/60 py-14 lg:py-40"
     >
       <div className="absolute inset-0 grid-lines opacity-30" />
       <div className="relative mx-auto max-w-7xl px-6">

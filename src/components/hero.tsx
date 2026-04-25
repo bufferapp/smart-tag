@@ -19,7 +19,7 @@ export function Hero() {
       <div className="absolute inset-0 grid-lines mask-fade-b opacity-80" />
       <div className="absolute -top-40 left-1/2 h-96 w-[900px] -translate-x-1/2 rounded-full bg-buffer/10 blur-[120px]" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pt-20 pb-28 lg:grid-cols-[1.1fr_1fr] lg:gap-10 lg:pt-28 lg:pb-36">
+      <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pt-20 pb-14 lg:grid-cols-[1.1fr_1fr] lg:gap-10 lg:pt-28 lg:pb-36">
         <div className="flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, y: 8 }}

@@ -58,7 +58,7 @@ export function Specs() {
   return (
     <section
       id="specs"
-      className="relative border-b border-hairline/60 py-28 lg:py-40"
+      className="relative border-b border-hairline/60 py-14 lg:py-40"
     >
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-20 grid items-end gap-8 lg:grid-cols-2">
