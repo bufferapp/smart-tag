@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Play, Clock3 } from "lucide-react";
@@ -54,24 +55,16 @@ export function VideoSection() {
               onClick={() => setIsPlaying(true)}
               className="group absolute inset-0 cursor-pointer text-left"
             >
-              {/* grain / scanlines */}
-              <div className="absolute inset-0 grain" />
-              <div
-                className="absolute inset-0 opacity-[0.06]"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(0deg, rgba(255,255,255,0.3) 0, rgba(255,255,255,0.3) 1px, transparent 1px, transparent 3px)",
-                }}
+              {/* background cover */}
+              <Image
+                src="/video_cover.jpg"
+                alt="Buffer Smart Tag — film cover"
+                fill
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                loading="eager"
+                className="absolute inset-0 object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               />
-
-              {/* timecode + meta */}
-              <div className="absolute left-6 top-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                <span className="flex h-1.5 w-1.5 rounded-full bg-buffer" />
-                REC · 00:00:00:00
-              </div>
-              <div className="absolute right-6 top-6 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                CH-01 / buffer-smart-tag.mp4
-              </div>
+              <div className="absolute inset-0 bg-background/30" />
 
               {/* centered play */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -92,20 +85,6 @@ export function VideoSection() {
                     <Clock3 className="h-3 w-3 text-buffer" />
                     Press play · 02:00
                   </div>
-                </div>
-              </div>
-
-              {/* bottom gradient */}
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background/90 to-transparent" />
-
-              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-                <div>
-                  <div className="text-foreground">INSTRUCTIONS MANUAL</div>
-                  <div className="mt-1">CRAFTED BY: BRUNO PAULINO</div>
-                </div>
-                <div className="text-right">
-                  <div>RUNTIME ~02:00</div>
-                  <div className="mt-1">SHOT IN 4K</div>
                 </div>
               </div>
             </button>
