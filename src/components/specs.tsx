@@ -65,18 +65,18 @@ export function Specs() {
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/50 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur">
               <span className="h-1 w-1 rounded-full bg-buffer" />
-              03 · The Object
+              04 · The Object
             </div>
             <h2 className="text-balance text-4xl font-medium leading-[1] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-              Small object,{" "}
+              Small tag,{" "}
               <span className="font-serif italic text-buffer">serious</span>{" "}
               engineering.
             </h2>
           </div>
           <p className="max-w-md text-pretty text-base leading-relaxed text-muted-foreground lg:text-lg lg:justify-self-end">
             PLA, a NFC chip, neodymium magnets, and enough love to make this
-            glow in the dark. And I mean it. Try it out in the dark, it glows!
-            💚
+            glow in the dark. And I mean it. Try it out in the darkness, it
+            glows! 💚
           </p>
         </div>
 

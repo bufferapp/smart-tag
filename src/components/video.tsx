@@ -20,7 +20,7 @@ export function VideoSection() {
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/50 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur">
             <span className="h-1 w-1 rounded-full bg-buffer" />
-            05 · The Demo
+            03 · The Demo
           </div>
           <h2 className="text-balance text-4xl font-medium leading-[1] tracking-[-0.03em] sm:text-5xl lg:text-6xl">
             Watch it <span className="font-serif italic text-buffer">move</span>

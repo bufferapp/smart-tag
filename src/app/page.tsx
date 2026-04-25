@@ -13,9 +13,9 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Flow />
+        <VideoSection />
         <Specs />
         <Program />
-        <VideoSection />
       </main>
       <Footer />
     </>

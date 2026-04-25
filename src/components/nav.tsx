@@ -25,6 +25,12 @@ export function Nav() {
             The Flow
           </a>
           <a
+            href="#demo"
+            className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Demo
+          </a>
+          <a
             href="#specs"
             className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
           >
@@ -35,12 +41,6 @@ export function Nav() {
             className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
           >
             Program
-          </a>
-          <a
-            href="#demo"
-            className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Demo
           </a>
         </nav>
         <div className="flex items-center gap-3">
