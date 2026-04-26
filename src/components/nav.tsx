@@ -16,7 +16,7 @@ export function Nav() {
             href="#object"
             className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
           >
-            The Object
+            What
           </a>
           <a
             href="#flow"
