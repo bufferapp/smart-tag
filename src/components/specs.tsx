@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import {
   Magnet,
@@ -58,8 +59,19 @@ export function Specs() {
   return (
     <section
       id="specs"
-      className="relative border-b border-hairline/60 py-14 lg:py-40"
+      className="relative overflow-hidden border-b border-hairline/60 py-14 lg:py-40"
     >
+      <div className="pointer-events-none absolute inset-0">
+        <Image
+          src="/3d_model.jpg"
+          alt=""
+          fill
+          aria-hidden
+          sizes="100vw"
+          className="object-cover object-top opacity-30 mix-blend-screen"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      </div>
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-20 grid items-end gap-8 lg:grid-cols-2">
           <div>
