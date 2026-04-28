@@ -54,9 +54,9 @@ export function Hero() {
             className="mt-8 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground lg:text-xl"
           >
             The Buffer Smart Tag is a handmade, 3D-printed, NFC-enabled token,
-            one for every teammate at Team Retreat. Tap it to publish, schedule,
-            or orchestrate any Buffer workflow. Automations already live on your
-            fridge.
+            one for every teammate at the 2026 Team Retreat. Tap it to publish,
+            schedule, or orchestrate any Buffer workflow. Automations now live
+            on your fridge.
           </motion.p>
 
           <motion.div
