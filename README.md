@@ -1,5 +1,7 @@
 # Buffer Smart Tag
 
+Live at **[smarttag.buffertools.com](https://smarttag.buffertools.com)** — deployed to GitHub Pages from `main` via `.github/workflows/deploy.yml`.
+
 The landing page for the **Buffer Smart Tag** — a handmade, 3D-printed, NFC-enabled token, one for every Bufferoo attending the 2026 Team Retreat.
 
 Tap the tag with a phone to publish, schedule, or kick off any Buffer workflow. It's a physical trigger for digital automations — built to live on your fridge, your desk, or anywhere magnetic.
