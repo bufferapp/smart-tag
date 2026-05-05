@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buffer Smart Tag
 
-## Getting Started
+The landing page for the **Buffer Smart Tag** — a handmade, 3D-printed, NFC-enabled token, one for every Bufferoo attending the 2026 Team Retreat.
 
-First, run the development server:
+Tap the tag with a phone to publish, schedule, or kick off any Buffer workflow. It's a physical trigger for digital automations — built to live on your fridge, your desk, or anywhere magnetic.
+
+## About the object
+
+- **3D-printed body** in Black Graphite PLA with a raised, glow-in-the-dark Buffer chevron (40 × 40 × 6 mm).
+- **NTAG 215 NFC chip** with 504 bytes of rewritable memory — reprogrammable from any smartphone.
+- **Ferrite-shielded** so the tag reads reliably even when stuck to metal.
+- **Four N52 neodymium magnets** for clean, secure mounting.
+- **Hand-assembled**, one per teammate.
+- **Infinitely rewritable** — point the tag at a new automation any time.
+
+This site walks visitors through what the tag is, how the tap-to-trigger flow works, the bill of materials, and the program around handing them out at retreat.
+
+## Developer notes
+
+Built with Next.js 16, React 19, Tailwind CSS v4, shadcn/ui, Radix, and Motion.
+
+### Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site. Edits to files under `src/` hot-reload automatically.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Project layout
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/` — Next.js App Router entry (`page.tsx`, `layout.tsx`, global styles).
+- `src/components/` — Page sections (`hero`, `flow`, `video`, `specs`, `program`, `nav`, `footer`) and shared UI primitives in `ui/`.
+- `src/lib/` — Shared utilities.
+- `public/` — Static assets (tag renders, 3D model shots, favicon).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Heads up
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This repo uses a newer Next.js than most training data covers. Before changing routing, config, or data-fetching patterns, check the relevant guide in `node_modules/next/dist/docs/` — APIs and conventions may differ from older versions.
