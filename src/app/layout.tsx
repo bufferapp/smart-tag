@@ -19,7 +19,7 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://smart-tag.bpaulino.com";
+const siteUrl = "https://smarttag.buffertools.com";
 const title = "Buffer Smart Tag: A physical trigger for your digital workflows";
 const description =
   "A handmade, 3D-printed, NFC-enabled token gifted at Buffer Team Retreat. Tap to publish, schedule, or automate. The physical trigger for your Buffer workflows.";
